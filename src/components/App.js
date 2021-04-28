@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import CountButton from './CountButton/CountButton'
 import SearchBar from './SearchBar/SearchBar'
 import Button from "./Button/Button"
+import Panels from "./ExpandingCards/ExpandingCards"
 
 
 const App = () => {
@@ -26,7 +27,8 @@ const App = () => {
     return(
             
             <div>
-                <Button>Hello World </Button>
+                <Panels />
+                {/* <Button>Hello World </Button> */}
                 <CountButton incrementBy={100} buttonColor={'lightblue'} />
 
                  {hasProducts ? <SearchBar products= {productsState}/> : "Loading"}  

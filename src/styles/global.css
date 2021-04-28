@@ -1,9 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 * {
   font-size: 1.5rem;
 }
 
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  height: 50vh;
+  /* overflow: hidden; */
+  margin: 0 auto;
 }
