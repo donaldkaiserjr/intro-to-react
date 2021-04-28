@@ -14,7 +14,7 @@ const App = () => {
             .then(res=>res.json())
             .then((productsArray) => {
                 const newProductsState = productsArray.map((product) => {
-                    return product.title
+                    return `${product.title} ${product.price}`
                 })
                 setProductsState(newProductsState)
             })
