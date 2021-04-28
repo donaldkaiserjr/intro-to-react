@@ -1,0 +1,10 @@
+.count-display {
+  background: pink;
+  color: black;
+}
+
+button {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+}
