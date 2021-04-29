@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./ExpandingCards.css"
 
 
 
 const Panels = () => {
-    console.log("test")
+    
+    const [currentPanels, setCurrentPanels] = useState()
 
+    useEffect(() => {
+        const panels = document.querySelectorAll('.panel')
+        
+
+        panels.forEach(panel => {
+            panel.addEventListener('click', () => {
+                removeActiveClasses()
+                panel.classList.add('active')
+            })
+        })
+        
+        function removeActiveClasses() {
+            panels.forEach(panel => {
+                panel.classList.remove('active')
+            })
+        }
+    },[])
+    
+    
 
 
 return (
