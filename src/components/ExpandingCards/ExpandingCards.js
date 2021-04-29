@@ -3,27 +3,41 @@ import "./ExpandingCards.css"
 
 
 
-const Panels = () => {
+const Panels = (props) => {
     
-    const [currentPanels, setCurrentPanels] = useState()
+    const [currentPanels, setCurrentPanels] = useState('.panel')
+    const [currentActive, setCurrentActive] = useState('.active')
 
-    useEffect(() => {
-        const panels = document.querySelectorAll('.panel')
+
+    // const setActive = () => {
+    //     setCurrentPanels(currentPanels
+    
+
+  
+    
+    
+
+
+
+
+    // useEffect(() => {
+       
+    //     const panels = document.querySelectorAll('.panel')
         
 
-        panels.forEach(panel => {
-            panel.addEventListener('click', () => {
-                removeActiveClasses()
-                panel.classList.add('active')
-            })
-        })
+    //     panels.forEach(panel => {
+    //         panel.addEventListener('click', () => {
+    //             removeActiveClasses()
+    //             panel.classList.add('active')
+    //         })
+    //     })
         
-        function removeActiveClasses() {
-            panels.forEach(panel => {
-                panel.classList.remove('active')
-            })
-        }
-    },[])
+    //     function removeActiveClasses() {
+    //         panels.forEach(panel => {
+    //             panel.classList.remove('active')
+    //         })
+    //     }
+    // },[])
     
     
 
@@ -31,13 +45,13 @@ const Panels = () => {
 return (
     <div>
         <div className="container">
-            <div className={"panel active"} style={{
+            <div className={'panel active'} style={{
                 backgroundImage: `url("https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")`
                 }}>
                 <h3>Explore The World</h3>
             </div>
 
-            <div className={"panel "} style={{
+            <div className={'panel'} style={{
                 backgroundImage: `url("https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")`
                 }}>
                 <h3>Wild Forest</h3>

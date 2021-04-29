@@ -27,7 +27,7 @@ const App = () => {
     return(
             
             <div>
-                <Panels />
+                <Panels activeCard={'.panel active'}/>
                 {/* <Button>Hello World </Button> */}
                 <CountButton incrementBy={100} buttonColor={'lightblue'} />
 
